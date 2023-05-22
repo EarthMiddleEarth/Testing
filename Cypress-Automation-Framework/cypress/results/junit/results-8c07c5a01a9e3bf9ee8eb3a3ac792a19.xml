@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.564" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-05-20T13:06:37" tests="0" file="cypress/e2e/webdriver-uni/mouse-action.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test mouse actions" timestamp="2023-05-20T13:06:37" tests="4" time="4.545" failures="0">
+    <testcase name="Test mouse actions Scroll element into view" time="2.449" classname="Scroll element into view">
+    </testcase>
+    <testcase name="Test mouse actions i should be able to drag and drop a dragable item" time="0.750" classname="i should be able to drag and drop a dragable item">
+    </testcase>
+    <testcase name="Test mouse actions i should be able to perform a double mouse click" time="0.698" classname="i should be able to perform a double mouse click">
+    </testcase>
+    <testcase name="Test mouse actions i should be able to hold down the left mouse click button on a given element" time="0.636" classname="i should be able to hold down the left mouse click button on a given element">
+    </testcase>
+  </testsuite>
+</testsuites>

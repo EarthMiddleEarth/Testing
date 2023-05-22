@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.970" tests="2" failures="1">
+  <testsuite name="Root Suite" timestamp="2023-05-20T13:06:13" tests="0" file="cypress/e2e/webdriver-uni/file-upload.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test file upload via webdriveruni" timestamp="2023-05-20T13:06:13" tests="2" time="3.962" failures="1">
+    <testcase name="Test file upload via webdriveruni Upload a file" time="0.000" classname="Upload a file">
+      <failure message="`cy.selectFile(&quot;/Users/passonsujaritwattanakul/Documents/Testing/Cypress-Automation-Framework/cypress/e2e/webdriver-uni/file-upload.js&quot;)` failed because the file does not exist at the following path:
+
+`/Users/passonsujaritwattanakul/Documents/Testing/Cypress-Automation-Framework/cypress/e2e/webdriver-uni/file-upload.js`
+
+https://on.cypress.io/selectfile" type="CypressError"><![CDATA[CypressError: `cy.selectFile("/Users/passonsujaritwattanakul/Documents/Testing/Cypress-Automation-Framework/cypress/e2e/webdriver-uni/file-upload.js")` failed because the file does not exist at the following path:
+
+`/Users/passonsujaritwattanakul/Documents/Testing/Cypress-Automation-Framework/cypress/e2e/webdriver-uni/file-upload.js`
+
+https://on.cypress.io/selectfile
+    at <unknown> (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:143596:78)
+    at tryCatcher (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:18744:23)
+    at Promise._settlePromiseFromHandler (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:16679:31)
+    at Promise._settlePromise (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:16736:18)
+    at Promise._settlePromise0 (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:16781:10)
+    at Promise._settlePromises (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:16857:18)
+    at _drainQueueStep (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:13451:12)
+    at _drainQueue (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:13444:9)
+    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:13460:5)
+    at Async.drainQueues (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:13330:14)
+From Your Spec Code:
+    at Context.eval (webpack:///./cypress/e2e/webdriver-uni/file-upload.js:7:26)]]></failure>
+    </testcase>
+    <testcase name="Test file upload via webdriveruni Upload no file" time="1.097" classname="Upload no file">
+    </testcase>
+  </testsuite>
+</testsuites>

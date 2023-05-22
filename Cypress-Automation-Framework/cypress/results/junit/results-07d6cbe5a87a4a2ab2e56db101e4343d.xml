@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="7.128" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-05-20T13:04:27" tests="0" file="cypress/e2e/webdriver-uni/autocomplete-dropdown-list.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Verify auto dropdown lists via webdriveruni" timestamp="2023-05-20T13:04:27" tests="1" time="7.120" failures="0">
+    <testcase name="Verify auto dropdown lists via webdriveruni Select specific product via autocomplete" time="7.106" classname="Select specific product via autocomplete">
+    </testcase>
+  </testsuite>
+</testsuites>
