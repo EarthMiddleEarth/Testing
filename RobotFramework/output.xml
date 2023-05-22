@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on darwin)" generated="20230512 15:46:49.482" rpa="false" schemaversion="3">
+<suite id="s1" name="Rest Api" source="/Users/passonsujaritwattanakul/Documents/Python/Testing/testing/robotframework/rest_api.robot">
+<test id="s1-t1" name="GET Request" line="8">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>sess1</arg>
+<arg>http://localhost:3000</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230512 15:46:49.628" level="INFO">Creating Session using : alias=sess1, url=http://localhost:3000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230512 15:46:49.627" endtime="20230512 15:46:49.628"/>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>sess1</arg>
+<arg>/</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<msg timestamp="20230512 15:46:49.628" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230512 15:46:49.646" level="INFO">GET Request : url=http://localhost:3000/ 
+ path_url=/ 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230512 15:46:49.647" level="INFO">GET Response : url=http://localhost:3000/ 
+ status=200, reason=OK 
+ headers={'X-Powered-By': 'Express', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Accept-Ranges': 'bytes', 'Cache-Control': 'public, max-age=0', 'Last-Modified': 'Wed, 10 May 2023 17:09:48 GMT', 'ETag': 'W/"809-18806a3f4bb"', 'Content-Type': 'text/html; charset=UTF-8', 'Content-Encoding': 'gzip', 'Date': 'Fri, 12 May 2023 08:46:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5', 'Transfer-Encoding': 'chunked'} 
+ body=&lt;html&gt;
+  &lt;head&gt;
+    &lt;link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    /&gt;
+    &lt;link rel="stylesheet" href="style.css" /&gt;
+    &lt;title&gt;JSON Server&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;div class="container"&gt;
+        &lt;nav&gt;
+          &lt;ul&gt;
+            &lt;li class="title"&gt;
+              JSON Server
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="https://github.com/users/typicode/sponsorship"&gt;
+                &lt;i class="fas fa-heart"&gt;&lt;/i&gt;GitHub Sponsors
+              &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="https://my-json-server.typicode.com"&gt;
+                &lt;i class="fas fa-burn"&gt;&lt;/i&gt;My JSON Server
+              &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="https://thanks.typicode.com"&gt;
+                &lt;i class="far fa-laugh"&gt;&lt;/i&gt;Supporters
+              &lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;div class="container"&gt;
+        &lt;h1&gt;Congrats!&lt;/h1&gt;
+        &lt;p&gt;
+          You're successfully running JSON Server
+          &lt;br /&gt;
+          ✧*｡٩(ˊᗜˋ*)و✧*｡
+        &lt;/p&gt;
+
+        &lt;div id="resources"&gt;&lt;/div&gt;
+
+        &lt;p&gt;
+          To access and modify resources, you can use any HTTP method:
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;code&gt;GET&lt;/code&gt;
+          &lt;code&gt;POST&lt;/code&gt;
+          &lt;code&gt;PUT&lt;/code&gt;
+          &lt;code&gt;PATCH&lt;/code&gt;
+          &lt;code&gt;DELETE&lt;/code&gt;
+          &lt;code&gt;OPTIONS&lt;/code&gt;
+        &lt;/p&gt;
+
+        &lt;div id="custom-routes"&gt;&lt;/div&gt;
+
+        &lt;h1&gt;Documentation&lt;/h1&gt;
+        &lt;p&gt;
+          &lt;a href="https://github.com/typicode/json-server"&gt;
+            README
+          &lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+      &lt;div class="container"&gt;
+        &lt;p&gt;
+          To replace this page, create a
+          &lt;code&gt;./public/index.html&lt;/code&gt; file.
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+ 
+ </msg>
+<msg timestamp="20230512 15:46:49.647" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230512 15:46:49.628" endtime="20230512 15:46:49.647"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20230512 15:46:49.647" endtime="20230512 15:46:49.648"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230512 15:46:49.648" level="INFO">200</msg>
+<status status="PASS" starttime="20230512 15:46:49.648" endtime="20230512 15:46:49.648"/>
+</kw>
+<status status="PASS" starttime="20230512 15:46:49.627" endtime="20230512 15:46:49.649"/>
+</test>
+<test id="s1-t2" name="POST Request" line="15">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>sess1</arg>
+<arg>http://localhost:3000</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230512 15:46:49.649" level="INFO">Creating Session using : alias=sess1, url=http://localhost:3000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230512 15:46:49.649" endtime="20230512 15:46:49.649"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>title=From Robot</arg>
+<arg>author=From Robot</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230512 15:46:49.650" level="INFO">${body} = {'title': 'From Robot', 'author': 'From Robot'}</msg>
+<status status="PASS" starttime="20230512 15:46:49.649" endtime="20230512 15:46:49.650"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230512 15:46:49.650" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20230512 15:46:49.650" endtime="20230512 15:46:49.650"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>sess1</arg>
+<arg>/posts</arg>
+<arg>data=${body}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20230512 15:46:49.650" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20230512 15:46:49.657" level="INFO">POST Request : url=http://localhost:3000/posts 
+ path_url=/posts 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '47'} 
+ body={"title": "From Robot", "author": "From Robot"} 
+ </msg>
+<msg timestamp="20230512 15:46:49.658" level="INFO">POST Response : url=http://localhost:3000/posts 
+ status=201, reason=Created 
+ headers={'X-Powered-By': 'Express', 'Vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'Access-Control-Expose-Headers': 'Location', 'Location': 'http://localhost:3000/posts/14', 'X-Content-Type-Options': 'nosniff', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-NgRyqNBMkoFG+tZeLWHTcS1e1vs"', 'Date': 'Fri, 12 May 2023 08:46:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={
+  "title": "From Robot",
+  "author": "From Robot",
+  "id": 14
+} 
+ </msg>
+<msg timestamp="20230512 15:46:49.658" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20230512 15:46:49.650" endtime="20230512 15:46:49.658"/>
+</kw>
+<status status="PASS" starttime="20230512 15:46:49.649" endtime="20230512 15:46:49.658"/>
+</test>
+<test id="s1-t3" name="POST Request" line="21">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>ax</arg>
+<arg>http://localhost:3000</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230512 15:46:49.659" level="INFO">Creating Session using : alias=ax, url=http://localhost:3000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230512 15:46:49.659" endtime="20230512 15:46:49.659"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>title=AXAXAX</arg>
+<arg>author=BXBXBXBX</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230512 15:46:49.659" level="INFO">${body} = {'title': 'AXAXAX', 'author': 'BXBXBXBX'}</msg>
+<status status="PASS" starttime="20230512 15:46:49.659" endtime="20230512 15:46:49.659"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230512 15:46:49.660" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20230512 15:46:49.659" endtime="20230512 15:46:49.660"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>ax</arg>
+<arg>/posts</arg>
+<arg>data=${body}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20230512 15:46:49.660" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20230512 15:46:49.668" level="INFO">POST Request : url=http://localhost:3000/posts 
+ path_url=/posts 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '41'} 
+ body={"title": "AXAXAX", "author": "BXBXBXBX"} 
+ </msg>
+<msg timestamp="20230512 15:46:49.668" level="INFO">POST Response : url=http://localhost:3000/posts 
+ status=201, reason=Created 
+ headers={'X-Powered-By': 'Express', 'Vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'Access-Control-Expose-Headers': 'Location', 'Location': 'http://localhost:3000/posts/15', 'X-Content-Type-Options': 'nosniff', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '59', 'ETag': 'W/"3b-0dV81ELlnMPTOOoS9PGtEc3LSjw"', 'Date': 'Fri, 12 May 2023 08:46:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={
+  "title": "AXAXAX",
+  "author": "BXBXBXBX",
+  "id": 15
+} 
+ </msg>
+<msg timestamp="20230512 15:46:49.668" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20230512 15:46:49.660" endtime="20230512 15:46:49.668"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>201</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20230512 15:46:49.668" endtime="20230512 15:46:49.668"/>
+</kw>
+<status status="PASS" starttime="20230512 15:46:49.658" endtime="20230512 15:46:49.669"/>
+</test>
+<doc>API testing in RobotFramework</doc>
+<status status="PASS" starttime="20230512 15:46:49.483" endtime="20230512 15:46:49.669"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Rest Api">Rest Api</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230512 15:46:49.628" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230512 15:46:49.650" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20230512 15:46:49.658" level="WARN">Multiple tests with name 'POST Request' executed in suite 'Rest Api'.</msg>
+<msg timestamp="20230512 15:46:49.660" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+</errors>
+</robot>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on darwin)" generated="20230511 23:06:42.237" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="/Users/passonsujaritwattanakul/.vscode/extensions/robocorp.robotframework-lsp-1.10.1/src/robotframework_ls/vendored/robotframework_interactive/robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Create Session">
+<arg>sess1</arg>
+<arg>http://localhost:3000</arg>
+<msg timestamp="20230511 23:06:43.287" level="FAIL">No keyword with name 'Create Session' found.</msg>
+<status status="FAIL" starttime="20230511 23:06:43.287" endtime="20230511 23:06:43.287"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>title=From Robot</arg>
+<arg>author=From Robot</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20230511 23:06:43.287" endtime="20230511 23:06:43.287"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20230511 23:06:43.287" endtime="20230511 23:06:43.287"/>
+</kw>
+<kw name="POST Request">
+<var>${response}</var>
+<arg>sess1</arg>
+<arg>/posts</arg>
+<arg>data=${body}</arg>
+<arg>headers=${header}</arg>
+<status status="NOT RUN" starttime="20230511 23:06:43.289" endtime="20230511 23:06:43.289"/>
+</kw>
+<status status="PASS" starttime="20230511 23:06:42.259" endtime="20230511 23:06:45.178"/>
+</kw>
+<status status="PASS" starttime="20230511 23:06:42.258" endtime="20230511 23:06:45.179"/>
+</test>
+<status status="PASS" starttime="20230511 23:06:42.238" endtime="20230511 23:06:45.180"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
