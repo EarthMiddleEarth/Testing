@@ -1,255 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.3 on darwin)" generated="20230512 15:46:49.482" rpa="false" schemaversion="3">
-<suite id="s1" name="Rest Api" source="/Users/passonsujaritwattanakul/Documents/Python/Testing/testing/robotframework/rest_api.robot">
-<test id="s1-t1" name="GET Request" line="8">
-<kw name="Create Session" library="RequestsLibrary">
-<arg>sess1</arg>
-<arg>http://localhost:3000</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230512 15:46:49.628" level="INFO">Creating Session using : alias=sess1, url=http://localhost:3000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20230512 15:46:49.627" endtime="20230512 15:46:49.628"/>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on darwin)" generated="20230526 23:44:19.845" rpa="false" schemaversion="3">
+<suite id="s1" name="Ebay" source="/Users/passonsujaritwattanakul/Documents/Testing/RobotFramework/RobotEbay/ebay.robot">
+<test id="s1-t1" name="Verify basic search functionality for ebay" line="18">
+<kw name="Start Test Case" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${ebay_homepage}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230526 23:44:19.964" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com'.</msg>
+<status status="PASS" starttime="20230526 23:44:19.964" endtime="20230526 23:44:40.579"/>
 </kw>
-<kw name="Get Request" library="RequestsLibrary">
-<var>${response}</var>
-<arg>sess1</arg>
-<arg>/</arg>
-<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
-<msg timestamp="20230512 15:46:49.628" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
-<msg timestamp="20230512 15:46:49.646" level="INFO">GET Request : url=http://localhost:3000/ 
- path_url=/ 
- headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg timestamp="20230512 15:46:49.647" level="INFO">GET Response : url=http://localhost:3000/ 
- status=200, reason=OK 
- headers={'X-Powered-By': 'Express', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Accept-Ranges': 'bytes', 'Cache-Control': 'public, max-age=0', 'Last-Modified': 'Wed, 10 May 2023 17:09:48 GMT', 'ETag': 'W/"809-18806a3f4bb"', 'Content-Type': 'text/html; charset=UTF-8', 'Content-Encoding': 'gzip', 'Date': 'Fri, 12 May 2023 08:46:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5', 'Transfer-Encoding': 'chunked'} 
- body=&lt;html&gt;
-  &lt;head&gt;
-    &lt;link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    /&gt;
-    &lt;link rel="stylesheet" href="style.css" /&gt;
-    &lt;title&gt;JSON Server&lt;/title&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-    &lt;header&gt;
-      &lt;div class="container"&gt;
-        &lt;nav&gt;
-          &lt;ul&gt;
-            &lt;li class="title"&gt;
-              JSON Server
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;a href="https://github.com/users/typicode/sponsorship"&gt;
-                &lt;i class="fas fa-heart"&gt;&lt;/i&gt;GitHub Sponsors
-              &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;a href="https://my-json-server.typicode.com"&gt;
-                &lt;i class="fas fa-burn"&gt;&lt;/i&gt;My JSON Server
-              &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;a href="https://thanks.typicode.com"&gt;
-                &lt;i class="far fa-laugh"&gt;&lt;/i&gt;Supporters
-              &lt;/a&gt;
-            &lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/nav&gt;
-      &lt;/div&gt;
-    &lt;/header&gt;
-    &lt;main&gt;
-      &lt;div class="container"&gt;
-        &lt;h1&gt;Congrats!&lt;/h1&gt;
-        &lt;p&gt;
-          You're successfully running JSON Server
-          &lt;br /&gt;
-          ✧*｡٩(ˊᗜˋ*)و✧*｡
-        &lt;/p&gt;
-
-        &lt;div id="resources"&gt;&lt;/div&gt;
-
-        &lt;p&gt;
-          To access and modify resources, you can use any HTTP method:
-        &lt;/p&gt;
-        &lt;p&gt;
-          &lt;code&gt;GET&lt;/code&gt;
-          &lt;code&gt;POST&lt;/code&gt;
-          &lt;code&gt;PUT&lt;/code&gt;
-          &lt;code&gt;PATCH&lt;/code&gt;
-          &lt;code&gt;DELETE&lt;/code&gt;
-          &lt;code&gt;OPTIONS&lt;/code&gt;
-        &lt;/p&gt;
-
-        &lt;div id="custom-routes"&gt;&lt;/div&gt;
-
-        &lt;h1&gt;Documentation&lt;/h1&gt;
-        &lt;p&gt;
-          &lt;a href="https://github.com/typicode/json-server"&gt;
-            README
-          &lt;/a&gt;
-        &lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/main&gt;
-
-    &lt;footer&gt;
-      &lt;div class="container"&gt;
-        &lt;p&gt;
-          To replace this page, create a
-          &lt;code&gt;./public/index.html&lt;/code&gt; file.
-        &lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/footer&gt;
-
-    &lt;script src="script.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
- 
- </msg>
-<msg timestamp="20230512 15:46:49.647" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230512 15:46:49.628" endtime="20230512 15:46:49.647"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230526 23:44:40.580" endtime="20230526 23:44:41.612"/>
 </kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>200</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20230512 15:46:49.647" endtime="20230512 15:46:49.648"/>
+<status status="PASS" starttime="20230526 23:44:19.963" endtime="20230526 23:44:41.613"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${response.status_code}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230512 15:46:49.648" level="INFO">200</msg>
-<status status="PASS" starttime="20230512 15:46:49.648" endtime="20230512 15:46:49.648"/>
+<kw name="Input Search Text and Click Search" library="HeaderPage">
+<arg>mobile</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${HomePageSearchTextBox}</arg>
+<arg>${search_text2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230526 23:44:41.614" level="INFO">Typing text 'mobile' into text field 'css:input#gh-ac'.</msg>
+<status status="PASS" starttime="20230526 23:44:41.613" endtime="20230526 23:45:43.759"/>
 </kw>
-<status status="PASS" starttime="20230512 15:46:49.627" endtime="20230512 15:46:49.649"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${HomePageSearchButton}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230526 23:45:43.764" level="INFO">Sending key(s) ('RETURN',) to css:input#gh-btn element.</msg>
+<msg timestamp="20230526 23:46:47.701" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20230526 23:46:47.702" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20230526 23:45:43.761" endtime="20230526 23:46:47.856"/>
+</kw>
+<status status="PASS" starttime="20230526 23:44:41.613" endtime="20230526 23:46:47.857"/>
+</kw>
+<kw name="Verify Search Result" library="SearchResultPage">
+<arg>mobile</arg>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${search_result} ${search_text2}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230526 23:46:52.568" level="INFO">Current page contains text 'results for mobile'.</msg>
+<status status="PASS" starttime="20230526 23:46:47.860" endtime="20230526 23:46:52.568"/>
+</kw>
+<status status="PASS" starttime="20230526 23:46:47.858" endtime="20230526 23:46:52.569"/>
+</kw>
+<kw name="End Test Case" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230526 23:46:52.569" endtime="20230526 23:46:52.817"/>
+</kw>
+<status status="PASS" starttime="20230526 23:46:52.569" endtime="20230526 23:46:52.817"/>
+</kw>
+<doc>This test case verifies the basic search</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20230526 23:44:19.963" endtime="20230526 23:46:52.817"/>
 </test>
-<test id="s1-t2" name="POST Request" line="15">
-<kw name="Create Session" library="RequestsLibrary">
-<arg>sess1</arg>
-<arg>http://localhost:3000</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230512 15:46:49.649" level="INFO">Creating Session using : alias=sess1, url=http://localhost:3000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20230512 15:46:49.649" endtime="20230512 15:46:49.649"/>
+<test id="s1-t2" name="Verify advanced search functionality" line="32">
+<kw name="Start Test Case" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${ebay_homepage}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230526 23:46:52.822" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com'.</msg>
+<status status="PASS" starttime="20230526 23:46:52.820" endtime="20230526 23:47:09.755"/>
 </kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${body}</var>
-<arg>title=From Robot</arg>
-<arg>author=From Robot</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230512 15:46:49.650" level="INFO">${body} = {'title': 'From Robot', 'author': 'From Robot'}</msg>
-<status status="PASS" starttime="20230512 15:46:49.649" endtime="20230512 15:46:49.650"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230526 23:47:09.756" endtime="20230526 23:47:10.489"/>
 </kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${header}</var>
-<arg>Content-Type=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230512 15:46:49.650" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20230512 15:46:49.650" endtime="20230512 15:46:49.650"/>
+<status status="PASS" starttime="20230526 23:46:52.819" endtime="20230526 23:47:10.489"/>
 </kw>
-<kw name="Post Request" library="RequestsLibrary">
-<var>${response}</var>
-<arg>sess1</arg>
-<arg>/posts</arg>
-<arg>data=${body}</arg>
-<arg>headers=${header}</arg>
-<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
-<msg timestamp="20230512 15:46:49.650" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
-<msg timestamp="20230512 15:46:49.657" level="INFO">POST Request : url=http://localhost:3000/posts 
- path_url=/posts 
- headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '47'} 
- body={"title": "From Robot", "author": "From Robot"} 
- </msg>
-<msg timestamp="20230512 15:46:49.658" level="INFO">POST Response : url=http://localhost:3000/posts 
- status=201, reason=Created 
- headers={'X-Powered-By': 'Express', 'Vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'Access-Control-Expose-Headers': 'Location', 'Location': 'http://localhost:3000/posts/14', 'X-Content-Type-Options': 'nosniff', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-NgRyqNBMkoFG+tZeLWHTcS1e1vs"', 'Date': 'Fri, 12 May 2023 08:46:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
- body={
-  "title": "From Robot",
-  "author": "From Robot",
-  "id": 14
-} 
- </msg>
-<msg timestamp="20230512 15:46:49.658" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20230512 15:46:49.650" endtime="20230512 15:46:49.658"/>
+<kw name="Click On Advanced Search Link" library="HeaderPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HomePageAdvancedSearchLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230526 23:47:10.491" level="INFO">Clicking element 'css:#gh-as-a'.</msg>
+<status status="PASS" starttime="20230526 23:47:10.490" endtime="20230526 23:47:24.570"/>
 </kw>
-<status status="PASS" starttime="20230512 15:46:49.649" endtime="20230512 15:46:49.658"/>
+<status status="PASS" starttime="20230526 23:47:10.490" endtime="20230526 23:47:24.570"/>
+</kw>
+<kw name="End Test Case" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230526 23:47:24.570" endtime="20230526 23:47:24.731"/>
+</kw>
+<status status="PASS" starttime="20230526 23:47:24.570" endtime="20230526 23:47:24.731"/>
+</kw>
+<doc>This test case verifies the advanced search</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20230526 23:46:52.818" endtime="20230526 23:47:24.731"/>
 </test>
-<test id="s1-t3" name="POST Request" line="21">
-<kw name="Create Session" library="RequestsLibrary">
-<arg>ax</arg>
-<arg>http://localhost:3000</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230512 15:46:49.659" level="INFO">Creating Session using : alias=ax, url=http://localhost:3000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20230512 15:46:49.659" endtime="20230512 15:46:49.659"/>
+<test id="s1-t3" name="Verify Link Text Clicking" line="38">
+<kw name="Start Test Case" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${ebay_homepage}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230526 23:47:24.733" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com'.</msg>
+<status status="PASS" starttime="20230526 23:47:24.733" endtime="20230526 23:47:39.369"/>
 </kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${body}</var>
-<arg>title=AXAXAX</arg>
-<arg>author=BXBXBXBX</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230512 15:46:49.659" level="INFO">${body} = {'title': 'AXAXAX', 'author': 'BXBXBXBX'}</msg>
-<status status="PASS" starttime="20230512 15:46:49.659" endtime="20230512 15:46:49.659"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230526 23:47:39.369" endtime="20230526 23:47:40.077"/>
 </kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${header}</var>
-<arg>Content-Type=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230512 15:46:49.660" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20230512 15:46:49.659" endtime="20230512 15:46:49.660"/>
+<status status="PASS" starttime="20230526 23:47:24.732" endtime="20230526 23:47:40.078"/>
 </kw>
-<kw name="Post Request" library="RequestsLibrary">
-<var>${response}</var>
-<arg>ax</arg>
-<arg>/posts</arg>
-<arg>data=${body}</arg>
-<arg>headers=${header}</arg>
-<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
-<msg timestamp="20230512 15:46:49.660" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
-<msg timestamp="20230512 15:46:49.668" level="INFO">POST Request : url=http://localhost:3000/posts 
- path_url=/posts 
- headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '41'} 
- body={"title": "AXAXAX", "author": "BXBXBXBX"} 
- </msg>
-<msg timestamp="20230512 15:46:49.668" level="INFO">POST Response : url=http://localhost:3000/posts 
- status=201, reason=Created 
- headers={'X-Powered-By': 'Express', 'Vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'Access-Control-Expose-Headers': 'Location', 'Location': 'http://localhost:3000/posts/15', 'X-Content-Type-Options': 'nosniff', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '59', 'ETag': 'W/"3b-0dV81ELlnMPTOOoS9PGtEc3LSjw"', 'Date': 'Fri, 12 May 2023 08:46:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
- body={
-  "title": "AXAXAX",
-  "author": "BXBXBXBX",
-  "id": 15
-} 
- </msg>
-<msg timestamp="20230512 15:46:49.668" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20230512 15:46:49.660" endtime="20230512 15:46:49.668"/>
+<kw name="Click On Link Text" library="HeaderPage">
+<arg>Sell</arg>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link:${link_text}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230526 23:47:40.079" level="INFO">Clicking link 'link:Sell'.</msg>
+<status status="PASS" starttime="20230526 23:47:40.078" endtime="20230526 23:48:03.304"/>
 </kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>201</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20230512 15:46:49.668" endtime="20230512 15:46:49.668"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230526 23:48:07.306" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230526 23:48:03.305" endtime="20230526 23:48:07.306"/>
 </kw>
-<status status="PASS" starttime="20230512 15:46:49.658" endtime="20230512 15:46:49.669"/>
+<status status="PASS" starttime="20230526 23:47:40.078" endtime="20230526 23:48:07.306"/>
+</kw>
+<kw name="End Test Case" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230526 23:48:07.307" endtime="20230526 23:48:07.429"/>
+</kw>
+<status status="PASS" starttime="20230526 23:48:07.306" endtime="20230526 23:48:07.429"/>
+</kw>
+<doc>This test case verifies Link Text Clicking</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20230526 23:47:24.732" endtime="20230526 23:48:07.430"/>
 </test>
-<doc>API testing in RobotFramework</doc>
-<status status="PASS" starttime="20230512 15:46:49.483" endtime="20230512 15:46:49.669"/>
+<doc>XXXXXXX</doc>
+<status status="PASS" starttime="20230526 23:44:19.846" endtime="20230526 23:48:07.430"/>
 </suite>
 <statistics>
 <total>
 <stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="3" fail="0" skip="0">Functional</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Rest Api">Rest Api</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Ebay">Ebay</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230512 15:46:49.628" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
-<msg timestamp="20230512 15:46:49.650" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
-<msg timestamp="20230512 15:46:49.658" level="WARN">Multiple tests with name 'POST Request' executed in suite 'Rest Api'.</msg>
-<msg timestamp="20230512 15:46:49.660" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
 </errors>
 </robot>
