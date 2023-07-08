@@ -1,70 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.3 on darwin)" generated="20230527 15:16:45.519" rpa="false" schemaversion="3">
-<suite id="s1" name="Contact-Us" source="/Users/passonsujaritwattanakul/Documents/Testing/RobotFramework/RobotAutomationTestStore/contact-us.robot">
-<test id="s1-t1" name="Verify Availability of The Site" line="11">
-<kw name="Start Test Case" type="SETUP">
-<arg>${automationTestStore_url}</arg>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on darwin)" generated="20230527 18:20:08.433" rpa="false" schemaversion="3">
+<suite id="s1" name="Checkbox" source="/Users/passonsujaritwattanakul/Documents/Testing/RobotFramework/RobotWebDriverUni/checkbox.robot">
+<test id="s1-t1" name="Test checking checkbox on webdriveruniversity" line="13">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
+<arg>${base_url}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230527 15:16:45.594" level="INFO">Opening browser 'Chrome' to base url 'https://www.automationteststore.com/'.</msg>
-<status status="PASS" starttime="20230527 15:16:45.593" endtime="20230527 15:16:59.956"/>
-</kw>
-<status status="PASS" starttime="20230527 15:16:45.593" endtime="20230527 15:16:59.956"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Automation Test Store</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230527 15:17:00.253" level="INFO">Current page contains text 'Automation Test Store'.</msg>
-<status status="PASS" starttime="20230527 15:16:59.956" endtime="20230527 15:17:00.253"/>
-</kw>
-<kw name="End Test Case" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230527 15:17:00.253" endtime="20230527 15:17:00.333"/>
-</kw>
-<status status="PASS" starttime="20230527 15:17:00.253" endtime="20230527 15:17:00.333"/>
-</kw>
-<status status="PASS" starttime="20230527 15:16:45.593" endtime="20230527 15:17:00.333"/>
-</test>
-<test id="s1-t2" name="Clicking To ContactUs Page" line="13">
-<kw name="Start Test Case" type="SETUP">
-<arg>${automationTestStore_url}</arg>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230527 15:17:00.334" level="INFO">Opening browser 'Chrome' to base url 'https://www.automationteststore.com/'.</msg>
-<status status="PASS" starttime="20230527 15:17:00.333" endtime="20230527 15:17:11.728"/>
-</kw>
-<status status="PASS" starttime="20230527 15:17:00.333" endtime="20230527 15:17:11.728"/>
+<msg timestamp="20230527 18:20:08.505" level="INFO">Opening browser 'Chrome' to base url 'http://www.webdriveruniversity.com'.</msg>
+<status status="PASS" starttime="20230527 18:20:08.505" endtime="20230527 18:20:16.778"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://a[text()='Contact Us']</arg>
+<arg>css:#dropdown-checkboxes-radiobuttons</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230527 15:17:11.728" level="INFO">Clicking element 'xpath://a[text()='Contact Us']'.</msg>
-<status status="PASS" starttime="20230527 15:17:11.728" endtime="20230527 15:17:13.739"/>
+<msg timestamp="20230527 18:20:16.779" level="INFO">Clicking element 'css:#dropdown-checkboxes-radiobuttons'.</msg>
+<status status="PASS" starttime="20230527 18:20:16.778" endtime="20230527 18:20:17.392"/>
 </kw>
-<kw name="End Test Case" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230527 15:17:13.740" endtime="20230527 15:17:13.820"/>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230527 18:20:17.392" endtime="20230527 18:20:17.465"/>
 </kw>
-<status status="PASS" starttime="20230527 15:17:13.739" endtime="20230527 15:17:13.820"/>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230527 18:20:20.525" level="INFO">${url} = http://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html</msg>
+<status status="PASS" starttime="20230527 18:20:17.466" endtime="20230527 18:20:20.525"/>
 </kw>
-<status status="PASS" starttime="20230527 15:17:00.333" endtime="20230527 15:17:13.820"/>
+<kw name="Log" library="BuiltIn">
+<arg>${url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230527 18:20:20.525" level="INFO">http://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html</msg>
+<status status="PASS" starttime="20230527 18:20:20.525" endtime="20230527 18:20:20.525"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>css:#checkboxes &gt; :nth-child(1) &gt; input</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230527 18:20:20.525" level="INFO">Selecting checkbox 'css:#checkboxes &gt; :nth-child(1) &gt; input'.</msg>
+<status status="PASS" starttime="20230527 18:20:20.525" endtime="20230527 18:20:20.930"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>css:#checkboxes &gt; :nth-child(1) &gt; input</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230527 18:20:20.931" level="INFO">Verifying checkbox 'css:#checkboxes &gt; :nth-child(1) &gt; input' is selected.</msg>
+<status status="PASS" starttime="20230527 18:20:20.931" endtime="20230527 18:20:21.062"/>
+</kw>
+<status status="PASS" starttime="20230527 18:20:08.504" endtime="20230527 18:20:21.062"/>
 </test>
-<status status="PASS" starttime="20230527 15:16:45.519" endtime="20230527 15:17:13.821"/>
+<status status="PASS" starttime="20230527 18:20:08.434" endtime="20230527 18:20:21.063"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Contact-Us">Contact-Us</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Checkbox">Checkbox</stat>
 </suite>
 </statistics>
 <errors>

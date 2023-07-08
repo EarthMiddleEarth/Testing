@@ -1,0 +1,7 @@
+Cypress-Automation-Framework/cypress/results
+Cypress-Automation-Framework/node_modules
+Cypress-Automation-Framework/cypress/screenshots
+Cypress-Automation-Framework/cypress/videos/*
+
+
+JsonServer/json-server/node_modules
